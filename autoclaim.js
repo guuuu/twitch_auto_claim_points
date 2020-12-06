@@ -8,16 +8,18 @@ function sleep(ms) {
 
 claiming = false;
 
-async function click_bonus(){ 
+async function click_bonus(){
+	let time = 60000; //1 minute
 	while (claiming){
 		try{
 			getElementByXpath("/html/body/div[1]/div/div[2]/div/div[2]/div/div[1]/div/div/div/div/div/section/div/div[5]/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div/div/button/span").click()
 			console.log("Bonus claimed sucessfully...");
-			await sleep(60000);
+			time = 900000; //after the first time, bonus appears in 14 minutes, so it will wait 15 to make sure bonus appeared
+			await sleep(time);
 		}
 		catch(err){
 			console.log("No bonus to claim....");
-			await sleep(60000);
+			await sleep(time);
 		}
 	}
 }
