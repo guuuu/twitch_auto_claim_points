@@ -1,4 +1,4 @@
-# twitch_auto_claim_points
+# Auto claim viewing points in twitch.tv
 
 Right now it works by copying and pasting the code on the console.
 
