@@ -14,8 +14,10 @@ async function click_bonus(){
 		try{
 			getElementByXpath("/html/body/div[1]/div/div[2]/div/div[2]/div/div[1]/div/div/div/div/div/section/div/div[5]/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div/div/button/span").click()
 			console.log("Bonus claimed sucessfully...");
-			time = 900000; //after the first time, bonus appears in 14 minutes, so it will wait 15 to make sure bonus appeared
-			console.log("Changed wait time to 15 minutes");
+			if (time != 900000){
+				console.log("Changed wait time to 15 minutes");
+			}
+			time = 900000;
 			await sleep(time);
 		}
 		catch(err){
